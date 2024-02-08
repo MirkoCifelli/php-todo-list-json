@@ -22,8 +22,13 @@
             </div>
             <div class="container mt-2 text-center">
                 <ul class="list-unstyled">
-                    <li v-for="game in games" class="m-2">
-                        {{ game.name }}
+                    <li v-for="game in games" 
+                    class="m-2"
+                    :class="{'text-decoration-line-through': game.done == true}"
+                    >
+                        <h3>
+                            {{ game.name }}
+                        </h3>
                     </li>
                 </ul>
             </div>
