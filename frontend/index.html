@@ -14,15 +14,15 @@
     <body>
         
         <div id="app">
-            <div class="container">
+            <div class="container text-center">
                 <h1>
                     Lista
                 </h1>
 
             </div>
-            <div class="container">
-                <ul>
-                    <li v-for="game in games">
+            <div class="container mt-2 text-center">
+                <ul class="list-unstyled">
+                    <li v-for="game in games" class="m-2">
                         {{ game.name }}
                     </li>
                 </ul>
