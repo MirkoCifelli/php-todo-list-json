@@ -14,9 +14,19 @@
     <body>
         
         <div id="app">
-            <h1>
-                {{ message }}
-            </h1>
+            <div class="container">
+                <h1>
+                    Lista
+                </h1>
+
+            </div>
+            <div class="container">
+                <ul>
+                    <li v-for="game in games">
+                        {{ game.name }}
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- Importazione Vue -->

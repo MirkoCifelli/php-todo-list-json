@@ -1,0 +1,26 @@
+[
+    {
+        "name":"The Finals",
+        "done": true
+    },
+    {
+        "name":"Apex Legends",
+        "done": true 
+    },  
+    {
+        "name":"Fortnite",
+        "done": true
+    },
+    {
+        "name":"R6",
+        "done": false
+    },
+    {
+        "name":"League of Legends",
+        "done": true
+    },
+    {
+        "name":"Escape from Tarkov",
+        "done": false
+    }
+]

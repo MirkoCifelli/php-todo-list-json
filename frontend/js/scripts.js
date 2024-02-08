@@ -5,11 +5,17 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'Template HTML CSS Vue',
+            games: [],
         };
     },
     methods: {
 
+    },
+    mounted(){
+        axios.get('http://localhost/Classe114/php-todo-list-json/backend/game.php').then((res)=>{
+            console.log(res.data);
+            this.games = res.data
+        })
     }
   // Monto l'istanza di Vue in pagina
 }).mount('#app');
