@@ -30,11 +30,16 @@
                     <li v-for="(game,i) in games" 
                     class="m-2"
                     @click ="changeDone(i)"
-                    :class=" game.done == true ? 'text-decoration-line-through':'' "
+                    
                     >
-                        <h3>
-                            {{ game.name }}
-                        </h3>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h3 :class=" game.done == true ? 'text-decoration-line-through':'' ">
+                                {{ game.name }}
+                            </h3>
+                            <button @click="removeGame(i)" class=" btn bg-black p-1 m-2 text-danger">
+                                X
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>

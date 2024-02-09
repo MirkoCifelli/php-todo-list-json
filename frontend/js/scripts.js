@@ -24,8 +24,8 @@ createApp({
                 }
             }    
             )
-            .then(res=>{
-                // console.log(res.data);
+            .then((res)=>{
+                console.log(res.data);
  
                     this.games.push({
                         name: this.newGame,
@@ -35,7 +35,28 @@ createApp({
                 }
             
             );
-        }
+        },
+        removeGame(i){
+            axios.post('http://localhost/Classe114/php-todo-list-json/backend/delete-game.php',
+            {
+                index: i,
+            },
+            {
+                headers: {
+                    'Content-Type' : 'multipart/form-data'
+                }
+            }    
+            )
+            .then((res)=>{
+                console.log(res.data);
+ 
+                this.games.splice(i, 1);
+                }
+            
+            );
+
+            
+        },
     },
     mounted(){
         axios.get('http://localhost/Classe114/php-todo-list-json/backend/game.php').then((res)=>{
