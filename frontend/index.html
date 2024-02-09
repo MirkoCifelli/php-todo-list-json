@@ -20,11 +20,17 @@
                 </h1>
 
             </div>
+            <div class="container text-center">
+                <input type="text" v-model="newGame">
+                <button @click="addGame()">Aggiungi</button>
+            </div>
+            
             <div class="container mt-2 text-center">
                 <ul class="list-unstyled">
-                    <li v-for="game in games" 
+                    <li v-for="(game,i) in games" 
                     class="m-2"
-                    :class="{'text-decoration-line-through': game.done == true}"
+                    @click ="changeDone(i)"
+                    :class=" game.done == true ? 'text-decoration-line-through':'' "
                     >
                         <h3>
                             {{ game.name }}
